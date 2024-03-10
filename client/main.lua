@@ -68,10 +68,10 @@ function open(bool)
     })
 end
 
-Citizen.CreateThread(function()
+CreateThread(function()
     local serverid = GetPlayerServerId(PlayerId())
     while true do
-        Citizen.Wait(0)
+        Wait(0)
 
         local hour = GetClockHours()
         local minute = GetClockMinutes()
@@ -87,7 +87,7 @@ Citizen.CreateThread(function()
             type = "main",
             time = time,
         })
-        Citizen.Wait(1000)
+        Wait(1000)
     end
 end)
 
